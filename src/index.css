@@ -5,9 +5,43 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+
+.menu-item {
+  padding: 10px;
+  color: black;
+}
+
+.fancy-slogan {
+  color:blueviolet;
+  font-family: "Brush Script MT";
+  font-size: 150%
+}
+
+.menu-img {
+  border-radius: 20%;
+  padding: 10px;
+}
+
+.item-title {
+  font-weight: bold;
+  font-size: 120%;
+}
+
+.item-desc {
+  font-size: 90%;
+}
+
+.add-button {
+  border-radius: 42%;
+  background-color: goldenrod;
+
 }
