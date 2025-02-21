@@ -37,15 +37,15 @@ export default function Cart () {
             <div class="container" style={phantom}>
             <div style={style}>
                 <div class="row">
-                    <div class="col-4">
+                    <div class="col-6">
                         Subtotal: ${ subtotal.toFixed(2) > 0 ? subtotal.toFixed(2) : -1 * subtotal.toFixed(2)}
                     </div>
-                    <div class="col-4">
+                    <div class="col-3">
                         <button type="button" class="menu-button" onClick={() => alertCart()}>
                             Order
                         </button>
                     </div>
-                    <div class="col-4">
+                    <div class="col-3">
                         <button type="button" class="menu-button" onClick={clearCart}>
                             Clear
                         </button>
