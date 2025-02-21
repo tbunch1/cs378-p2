@@ -41,7 +41,11 @@ code {
 }
 
 .add-button {
-  border-radius: 42%;
-  background-color: goldenrod;
+  border-radius: 50%;
+  background-color: white;
 
+}
+.menu-button {
+  border-radius: 20%;
+  background-color: lightgray;
 }

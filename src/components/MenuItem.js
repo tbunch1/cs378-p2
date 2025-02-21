@@ -1,12 +1,17 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; 
+import { useCart } from "./CartProvider";
+
 
 // This is a functional component that represents a single menu item. It currently takes in the title and displays it in an h2 element.
 // Modify the component to take in all the other properties of a menu item you need and display them in the component.
 // Use bootstrap to style the elements so that it looks like the mockup in the assignment.
 // Hint: You can use the image name to get the image from the images folder.
 const MenuItem = ({ item }) => {
+    const { addToCart, removeFromCart, getCount } = useCart(); 
     let imgdir = "images/".concat(item.imageName);
+
+
 
     return (
         <div>
@@ -32,9 +37,13 @@ const MenuItem = ({ item }) => {
                         {item.price}
 
                         </div>
-                        <div class="col-3">
-                        <button type="button" class="add-button">
-                            Add
+                        <div class="col-4">
+                        <button type="button" class="add-button" onClick={ () => removeFromCart(item)} >
+                            -
+                        </button>
+                        { getCount(item.id) }
+                        <button type="button" class="add-button" onClick={ () => addToCart(item)} >
+                            +
                         </button>
                         </div>
                     </div>

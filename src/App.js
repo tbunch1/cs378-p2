@@ -1,7 +1,8 @@
 import './App.css';
 import MenuItem from './components/MenuItem';
 import Header from './components/Header';
-
+import Cart from './components/Cart';
+import React, { useState } from 'react';
 
 // import 'bootstrap/dist/css/bootstrap.min.css'; // This imports bootstrap css styles. You can use bootstrap or your own classes by using the className attribute in your elements.
 
@@ -14,6 +15,7 @@ const menuItems = [
     description: 'Japanese dumplings',
     imageName: 'gyoza.png',
     price: 5.99,
+    count: 0,
   },
   {
     id: 2,
@@ -21,6 +23,7 @@ const menuItems = [
     description: 'Japanese rice rolls',
     imageName: 'sushi.png',
     price: 6.99,
+    count: 0,
   },
   {
     id: 3,
@@ -28,6 +31,7 @@ const menuItems = [
     description: 'Japanese noodle soup',
     imageName: 'ramen.png',
     price: 7.99,
+    count: 0,
   },
   {
     id: 4,
@@ -35,6 +39,7 @@ const menuItems = [
     description: 'Japanese green tea cake',
     imageName: 'matcha-cake.png',
     price: 4.99,
+    count: 0,
   },
   {
     id: 5,
@@ -42,6 +47,7 @@ const menuItems = [
     description: 'Japanese rice cake',
     imageName: 'mochi.png',
     price: 3.99,
+    count: 0,
   },
   {
     id: 6,
@@ -49,6 +55,7 @@ const menuItems = [
     description: 'Japanese skewered chicken',
     imageName: 'yakitori.png',
     price: 2.99,
+    count: 0,
   },
   {
     id: 7,
@@ -56,6 +63,7 @@ const menuItems = [
     description: 'Japanese octopus balls',
     imageName: 'takoyaki.png',
     price: 5.99,
+    count: 0,
   },
   {
     id: 8,
@@ -63,6 +71,7 @@ const menuItems = [
     description: 'Japanese raw fish',
     imageName: 'sashimi.png',
     price: 8.99,
+    count: 0,
   },
   {
     id: 9,
@@ -70,6 +79,7 @@ const menuItems = [
     description: 'Japanese savory pancake',
     imageName: 'okonomiyaki.png',
     price: 6.99,
+    count: 0,
   },
   {
     id: 10,
@@ -77,11 +87,16 @@ const menuItems = [
     description: 'Japanese curry with fried pork',
     imageName: 'katsu-curry.png',
     price: 9.99,
+    count: 0,
   }
 ];
 
 
 function App() {
+
+  const [subtotal, updateSubtotal] = useState(0);
+  const [items, updateItems] = useState([]);
+
   return (
     <div>
       <Header />
@@ -91,6 +106,7 @@ function App() {
           <MenuItem key={menuItem.id} item={menuItem} /> 
         ))}{/* Example for how to use a component */}
       </div>
+      <Cart /> 
     </div>
   );
 }
