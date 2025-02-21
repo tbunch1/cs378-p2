@@ -33,15 +33,20 @@ const MenuItem = ({ item }) => {
                         </ul>
                     </div>
                     <div class="row justify-content-between align-items-bottom">
-                        <div class="col-3">
+                        <div class="col-6">
                         {item.price}
 
                         </div>
-                        <div class="col-5">
+                        <div class="col-2" align="right">
                         <button type="button" class="add-button" onClick={ () => removeFromCart(item)} >
                             -
                         </button>
+                        </div>
+                        <div class="col-2" align="center">
                         { getCount(item.id) }
+                        </div>
+                        <div class="col-2" align="left">
+
                         <button type="button" class="add-button" onClick={ () => addToCart(item)} >
                             +
                         </button>
