@@ -62,6 +62,9 @@ export const CartProvider = ({ children }) => {
 
 
   const cartToString = () => {
+    if (cart.length === 0) {
+      return "No items in cart.";
+    }
     let txt = "Order Placed!\n";
     txt += cart.map(item => item.count + " " + item.title).join(", ");
     return txt
