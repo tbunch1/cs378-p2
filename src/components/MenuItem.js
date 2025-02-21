@@ -37,7 +37,7 @@ const MenuItem = ({ item }) => {
                         {item.price}
 
                         </div>
-                        <div class="col-4">
+                        <div class="col-5">
                         <button type="button" class="add-button" onClick={ () => removeFromCart(item)} >
                             -
                         </button>

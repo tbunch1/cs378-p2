@@ -8,7 +8,7 @@ import { useCart } from "./CartProvider";
 var phantom = {
     display: 'block',
     padding: '20px',
-    height: '60px',
+    height: '80px',
     width: '100%',
   }
 
