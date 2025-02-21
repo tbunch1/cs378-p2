@@ -42,7 +42,7 @@ const MenuItem = ({ item }) => {
                             -
                         </button>
                         </div>
-                        <div class="col-2" align="center">
+                        <div class="col-2 text-center" align="center">
                         { getCount(item.id) }
                         </div>
                         <div class="col-2" align="left">
